@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    image: mainmethod22/feathr-web:latest
+    container_name: feathr-web
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
+    env_file:
+      .env
